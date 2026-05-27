@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>emu_games</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #111;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    min-height: 100vh;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #4CAF50;
+    text-shadow: 0 0 10px rgba(76,175,80,.5);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.game-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 6px;
+    background: #222;
+    color: #ddd;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 8px;
+    line-height: 1.4;
+    min-height: 60px;
+    transition: .15s;
+}
+.game-btn:hover {
+    background: #4CAF50;
+    color: #000;
+    border-color: #4CAF50;
+    transform: scale(1.05);
+}
+@media (max-width: 1200px) {
+    .grid { grid-template-columns: repeat(5, 1fr); }
+}
+@media (max-width: 600px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<h1>emu_games</h1>
+<div class="grid">
+            <a href="games/drmario/" class="game-btn">Dr. Mario</a>
+            <a href="games/mario3/" class="game-btn">Mario 3</a>
+            <a href="games/mario_golf/" class="game-btn">Mario Golf</a>
+            <a href="games/mario_golf_advance_tour/" class="game-btn">Mario Golf Advance Tour</a>
+            <a href="games/mariokart64/" class="game-btn">Mario Kart 64</a>
+            <a href="games/mario_kart_super_circuit/" class="game-btn">Mario Kart Super Circuit</a>
+            <a href="games/mario_party/" class="game-btn">Mario Party</a>
+            <a href="games/mario_party_2/" class="game-btn">Mario Party 2</a>
+            <a href="games/mario_party_advance/" class="game-btn">Mario Party Advance</a>
+            <a href="games/mario_picross/" class="game-btn">Mario's Picross</a>
+            <a href="games/mario_pinball_land/" class="game-btn">Mario Pinball Land</a>
+            <a href="games/mario_tennis/" class="game-btn">Mario Tennis</a>
+            <a href="games/mario_tennis_power_tour/" class="game-btn">Mario Tennis Power Tour</a>
+            <a href="games/mario_vs_donkey_kong/" class="game-btn">Mario vs. Donkey Kong</a>
+            <a href="games/paper_mario/" class="game-btn">Paper Mario</a>
+            <a href="games/pokemon_blue/" class="game-btn">Pokemon Blue</a>
+            <a href="games/pokemon_crystal/" class="game-btn">Pokemon Crystal</a>
+            <a href="games/pokemon_gold/" class="game-btn">Pokemon Gold</a>
+            <a href="games/pokemon_red/" class="game-btn">Pokemon Red</a>
+            <a href="games/pokemon_silver/" class="game-btn">Pokemon Silver</a>
+            <a href="games/pokemon_yellow/" class="game-btn">Pokemon Yellow</a>
+            <a href="games/sonic1/" class="game-btn">Sonic 1</a>
+            <a href="games/sonic_2/" class="game-btn">Sonic 2</a>
+            <a href="games/sonic_3/" class="game-btn">Sonic 3</a>
+            <a href="games/sonic_3d_blast/" class="game-btn">Sonic 3D Blast</a>
+            <a href="games/sonic_advance/" class="game-btn">Sonic Advance</a>
+            <a href="games/sonic_advance_2/" class="game-btn">Sonic Advance 2</a>
+            <a href="games/sonic_advance_3/" class="game-btn">Sonic Advance 3</a>
+            <a href="games/sonic_battle/" class="game-btn">Sonic Battle</a>
+            <a href="games/sonic_knuckles/" class="game-btn">Sonic & Knuckles</a>
+            <a href="games/sonic_pinball_party/" class="game-btn">Sonic Pinball Party</a>
+            <a href="games/sonic_spinball/" class="game-btn">Sonic Spinball</a>
+            <a href="games/supermario/" class="game-btn">Super Mario Bros</a>
+            <a href="games/super_mario_advance/" class="game-btn">Super Mario Advance</a>
+            <a href="games/super_mario_advance_3/" class="game-btn">Super Mario Advance 3: Yoshi's Island</a>
+            <a href="games/super_mario_bros_deluxe/" class="game-btn">Super Mario Bros. Deluxe</a>
+            <a href="games/super_mario_land/" class="game-btn">Super Mario Land</a>
+            <a href="games/super_mario_land_2/" class="game-btn">Super Mario Land 2</a>
+            <a href="games/supermarioworld/" class="game-btn">Super Mario World</a>
+            <a href="games/superstarsaga/" class="game-btn">Mario & Luigi Superstar Saga</a>
+            <a href="games/wario_land_3/" class="game-btn">Wario Land 3</a>
+        </div>
+</body>
+</html>
