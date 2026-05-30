@@ -53,7 +53,7 @@
   var btn = document.createElement('button');
   btn.textContent = '🐛';
   btn.style.cssText =
-    'position:fixed;bottom:12px;right:12px;z-index:99999;width:36px;height:36px;' +
+    'position:fixed;top:12px;left:12px;z-index:99999;width:36px;height:36px;' +
     'border-radius:50%;border:2px solid #fff;background:#1a1a2e;color:#fff;' +
     'font-size:18px;cursor:pointer;opacity:0.6;transition:opacity .2s;' +
     'display:flex;align-items:center;justify-content:center;line-height:1;' +
