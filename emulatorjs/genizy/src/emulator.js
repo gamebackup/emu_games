@@ -603,7 +603,8 @@ class EmulatorJS {
     }
     initGameCore(js, wasm, thread) {
         let script = this.createElement("script");
-        script.src = URL.createObjectURL(new Blob([js], {type: "application/javascript"}));
+        const patch = "var _q=document.querySelector.bind(document);document.querySelector=function(s){return s==='!parent'?document.querySelector('.ejs_parent'):_q(s)};";
+        script.src = URL.createObjectURL(new Blob([patch + js], {type: "application/javascript"}));
         script.addEventListener("load", () => {
             this.initModule(wasm, thread);
         });
