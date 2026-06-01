@@ -30,6 +30,7 @@
       EJS_core = "nds";
       EJS_gameName = "Phoenix Wright - Ace Attorney - Trials and Tribulations";
       EJS_defaultOptions = { retroarch_core: "desmume2015" };
+      try { localStorage.removeItem("ejs-nds-settings"); } catch(e){};
       EJS_color = "#0064ff";
       EJS_startOnLoaded = true;
       EJS_pathtodata = "../../emulatorjs/genizy/";
