@@ -51,10 +51,12 @@
 			document.getElementById("game").style.display = "block";
 			document.getElementById("startButton").style.display = "none";
 			EJS_player = "#game";
-			EJS_core = "segaMD";
+			EJS_core = "nds";
 			EJS_color = "#000000";
 			EJS_startOnLoaded = true;
-			EJS_pathtodata = "../../emulatorjs/seraph/";
+			EJS_defaultOptions = { retroarch_core: "desmume2015" };
+			try { localStorage.removeItem("ejs-nds-settings"); } catch(e){};
+			EJS_pathtodata = "../../emulatorjs/genizy/";
 			EJS_gameUrl = "../../roms/wario_touched.nds";
 			loadGame();
 		}
