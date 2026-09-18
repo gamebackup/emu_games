@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body style="font:13px monospace">
+<div id="out"></div>
+<script>
+function el(t){var d=document.createElement('div');d.textContent=t;document.getElementById('out').appendChild(d);}
+el('start ' + Date.now());
+fetch('../../emulatorjs/seraph/cores/picodrive-wasm.data').then(r=>r.arrayBuffer()).then(buf=>{
+  el('fetched '+buf.byteLength);
+  fetch('../../emulatorjs/seraph/compression/extract7z.js').then(r=>r.arrayBuffer()).then(b=>{
+    const worker = new Worker(URL.createObjectURL(new Blob([b],{type:'application/javascript'})));
+    worker.onmessage = (e)=>{
+      const t=e.data.t;
+      if(t===4){ el(Math.floor(e.data.current/e.data.total*100)+'% core-extract'); }
+      if(t===2){ el('file: '+e.data.file+' '+e.data.size); }
+      if(t===1){ el('DONE ' + Object.keys(e.data).length); }
+    };
+    worker.onerror=(e)=>{ el('WORKER ERR '+e.message); };
+    worker.postMessage(new Uint8Array(buf));
+  });
+});
+</script>
+</body>
+</html>
