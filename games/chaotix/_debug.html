@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body style="margin:0">
+	<div style="width:100vw;height:100vh">
+		<div id="game"></div>
+	</div>
+	<script>
+		window.EJS_DEBUG_XX = true;
+		window.onerror = function(m, s, l, c, e) {
+			var d = document.createElement('div');
+			d.style.cssText = 'color:red;font:12px monospace;white-space:pre-wrap';
+			d.textContent = 'ERR: ' + m + ' @' + l + ':' + c;
+			document.body.appendChild(d);
+		};
+		window.EJS_player = "#game";
+		window.EJS_core = "sega32x";
+		window.EJS_color = "#000000";
+		window.EJS_startOnLoaded = true;
+		window.EJS_pathtodata = "../../emulatorjs/seraph/";
+		window.EJS_gameUrl = "../../roms/knuckles_chaotix.32x";
+		var s = document.createElement("script");
+		s.src = "../../emulatorjs/seraph/loader.js";
+		document.body.appendChild(s);
+	</script>
+</body>
+</html>
