@@ -3753,6 +3753,7 @@ class EmulatorJS {
                 }
             }
             allOpts[id] = opts;
+            this.settings[id] = this.settings[id] === undefined ? defaultOption : this.settings[id];
             
             funcs.push((title) => {
                 if (id !== title) return;
@@ -3860,7 +3861,7 @@ class EmulatorJS {
             addToMenu(this.localization('Save State Location'), 'save-state-location', {
                 'download': this.localization("Download"),
                 'browser': this.localization("Keep in Browser")
-            }, 'download');
+            }, 'browser');
         }
         
         if (this.touch || navigator.maxTouchPoints > 0) {
